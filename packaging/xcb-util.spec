@@ -49,7 +49,7 @@ make %{?_smp_mflags}
 
 %files
 %defattr(-,root,root,-)
-%{_libdir}/libxcb-util.so.0*
+%{_libdir}/libxcb-util.so.*
 
 %files devel
 %defattr(-,root,root,-)
