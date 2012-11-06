@@ -1,7 +1,3 @@
-#
-# Please submit bugfixes or comments via http://bugs.tizen.org/
-#
-
 Name:           xcb-util
 Version:        0.3.8
 Release:        slp.1.2
@@ -9,7 +5,7 @@ License:        MIT
 Summary:        utility libraries for X C Binding
 Url:            http://xcb.freedesktop.org/
 Group:          System/Libraries
-Source:         %{name}-%{version}.tar.gz
+Source:         %{name}-%{version}.tar.bz2
 
 BuildRequires:  gperf
 BuildRequires:  libxcb-devel >= 1.4
@@ -39,9 +35,7 @@ Development files for xcb-util.
 %setup -q
 
 %build
-
-./autogen.sh
-%reconfigure --disable-static
+%configure --disable-static
 
 make %{?_smp_mflags}
 
@@ -62,5 +56,3 @@ make %{?_smp_mflags}
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/*.so
 %{_includedir}/xcb/*.h
-
-
