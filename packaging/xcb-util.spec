@@ -42,10 +42,12 @@ make %{?_smp_mflags}
 %install
 %make_install
 
+%remove_docs
+
 %post -p /sbin/ldconfig
+
 %postun -p /sbin/ldconfig
 
-%remove_docs
 
 %files
 %defattr(-,root,root,-)
