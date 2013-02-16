@@ -1,3 +1,6 @@
+* Sat Feb 16 2013 Anas Nashif <anas.nashif@intel.com> submit/trunk/20130216.164923@a716c86
+- put library in libxcb-util for consistency
+
 * Sat Feb 16 2013 Anas Nashif <anas.nashif@intel.com> submit/trunk/20121116.224343@1dabdbe
 - Add baselibs.conf
 

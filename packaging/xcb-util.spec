@@ -2,7 +2,7 @@ Name:           xcb-util
 Version:        0.3.9
 Release:        0
 License:        MIT
-Summary:        utility libraries for X C Binding
+Summary:        Utility libraries for X C Binding
 Url:            http://xcb.freedesktop.org/
 Group:          System/Libraries
 Source:         %{name}-%{version}.tar.bz2
@@ -20,6 +20,24 @@ libraries. These experimental libraries provide convenience functions
 and interfaces which make the raw X protocol more usable. Some of the
 libraries also provide client-side code which is not strictly part of
 the X protocol but which have traditionally been provided by Xlib.
+
+%package -n libxcb-util
+Summary:        XCB utility modules
+Group:          System/Libraries
+
+%description -n libxcb-util
+The XCB util modules provide a number of libraries which sit on top
+of libxcb, the core X protocol library, and some of the extension
+libraries. These experimental libraries provide convenience functions
+and interfaces which make the raw X protocol more usable. Some of the
+libraries also provide client-side code which is not strictly part of
+the X protocol but which have traditionally been provided by Xlib.
+
+Included in this package are:
+
+- atom: Standard core X atom constants and atom caching.
+- aux: Convenient access to connection setup and some core requests.
+- event: Callback X event handling.
 
 %package 	devel
 Summary:        Development and header files for xcb-util
@@ -43,12 +61,12 @@ make %{?_smp_mflags}
 
 %remove_docs
 
-%post -p /sbin/ldconfig
+%post -n libxcb-util -p /sbin/ldconfig
 
-%postun -p /sbin/ldconfig
+%postun -n libxcb-util -p /sbin/ldconfig
 
 
-%files
+%files -n libxcb-util
 %defattr(-,root,root,-)
 %{_libdir}/libxcb-util.so.*
 
