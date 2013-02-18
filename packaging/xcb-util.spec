@@ -42,7 +42,7 @@ Included in this package are:
 %package 	devel
 Summary:        Development and header files for xcb-util
 Group:          System Environment/Libraries
-Requires:       %{name} = %{version}
+Requires:       libxcb-util = %{version}
 Requires:       pkgconfig
 
 %description	devel
