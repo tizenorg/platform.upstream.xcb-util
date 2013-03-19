@@ -4,7 +4,7 @@ Release:        0
 License:        MIT
 Summary:        Utility libraries for X C Binding
 Url:            http://xcb.freedesktop.org/
-Group:          System/Libraries
+Group:          Graphics/X Window System
 Source:         %{name}-%{version}.tar.bz2
 
 BuildRequires:  gperf
@@ -23,7 +23,7 @@ the X protocol but which have traditionally been provided by Xlib.
 
 %package -n libxcb-util
 Summary:        XCB utility modules
-Group:          System/Libraries
+Group:          Graphics/X Window System
 
 %description -n libxcb-util
 The XCB util modules provide a number of libraries which sit on top
@@ -41,7 +41,7 @@ Included in this package are:
 
 %package 	devel
 Summary:        Development and header files for xcb-util
-Group:          System Environment/Libraries
+Group:          Development/Libraries
 Requires:       libxcb-util = %{version}
 Requires:       pkgconfig
 

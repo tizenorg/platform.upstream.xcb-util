@@ -1,3 +1,6 @@
+* Mon Mar 18 2013 Anas Nashif <anas.nashif@intel.com> submit/trunk/20130216.171741@f595d16
+- Fixed package groups
+
 * Mon Feb 18 2013 Markus Lehtonen <markus.lehtonen@linux.intel.com> submit/trunk/20130216.171741@52e9c7f
 - Fix requires of devel package
 
