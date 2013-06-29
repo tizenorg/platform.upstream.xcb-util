@@ -6,6 +6,7 @@ Summary:        Utility libraries for X C Binding
 Url:            http://xcb.freedesktop.org/
 Group:          Graphics/X Window System
 Source:         %{name}-%{version}.tar.bz2
+Source1001: 	xcb-util.manifest
 
 BuildRequires:  gperf
 BuildRequires:  libxcb-devel >= 1.4
@@ -50,6 +51,7 @@ Development files for xcb-util.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure --disable-static
@@ -67,10 +69,12 @@ make %{?_smp_mflags}
 
 
 %files -n libxcb-util
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_libdir}/libxcb-util.so.*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/*.so
