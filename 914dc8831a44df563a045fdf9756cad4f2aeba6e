@@ -1,0 +1,8 @@
+Change-Id: I914dc8831a44df563a045fdf9756cad4f2aeba6e
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:38:34 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4991
+Project: platform/upstream/xcb-util
+Branch: refs/heads/tizen
