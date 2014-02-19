@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:           xcb-util
 Version:        0.3.9
 Release:        0
@@ -13,6 +15,10 @@ BuildRequires:  libxcb-devel >= 1.4
 BuildRequires:  m4
 BuildRequires:  pkgconfig(xorg-macros)
 BuildRequires:  pkgconfig(xproto)
+
+%if !%{with x}
+ExclusiveArch:
+%endif
 
 %description
 The xcb-util module provides a number of libraries which sit on top of
